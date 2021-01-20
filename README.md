@@ -1,5 +1,5 @@
 # M5Stack-IoT-Pool-Controller
-IoT pool controller using the M5Stack Core2 and integrations with MQTT and Jandy iAquaLink on Home Assistant.
+IoT pool controller using the M5Stack Core2 and integrations with MQTT and Jandy iAquaLink on Home Assistant (HA).
 
 
 
@@ -9,18 +9,24 @@ IoT pool controller using the M5Stack Core2 and integrations with MQTT and Jandy
 
 
 ## Prerequisites
-For this project, you will need Home Assistant already set up and running. Then you will need to enable the integrations for Jandy iAquaLink and MQTT under the Configuration menu, then Integrations. I won't cover those instructions in the interest of time and also there are already many YouTube videos and documentation on those topics. Here are some examples.
+For this project, you will need Home Assistant already set up and running. Then you will need to enable the integrations for Jandy iAquaLink and MQTT under the Configuration menu, then Integrations.
+<img src="HA_integrations.png" width="1280">
+
+I won't cover those instructions in the interest of time and also there are already many YouTube videos and documentation on those topics. Here are some examples.
 - [https://www.youtube.com/results?search_query=home+assistant](https://www.youtube.com/results?search_query=home+assistant)
 - [https://www.youtube.com/results?search_query=home+assistant+mqtt](https://www.youtube.com/results?search_query=home+assistant+mqtt)
 - [https://www.home-assistant.io/integrations/iaqualink/](https://www.home-assistant.io/integrations/iaqualink/)
 
-You will also need to set up a Long-Lived Access Token (LLAT) within Home Assistant. Go to your Profile within HA and scroll down to the bottom where you see the link for "Create Token" under Long-Lived Access Tokens. You will need to copy/paste this API token into the uiFlow Http Request API Header blocks (key "Authorization" value "Bearer {your_LLAT_from_Home_Assistant}"
+You will also need to set up a Long-Lived Access Token (LLAT) within Home Assistant. Go to your Profile within HA and scroll down to the bottom where you see the link for "Create Token" under Long-Lived Access Tokens. You will need to copy/paste this API token into the uiFlow Http Request API Header blocks (key "Authorization" value "Bearer {your_LLAT_from_Home_Assistant}". 
 
 <img src="./LLAT.png" width="440">
 
+Note: keep the word *Bearer* in front of the API token.
+
+<img src="./HA_token_uiFlow.png" width="440">
 
 
-## uiFlow
+## uiFlow Program
 *Note: at the time of writing, I'm using uiFlow V1.7.1*
 
 Here is the uiFlow program for the M5Stack IoT Pool Controller. You will need to replace or update the following with your local configuration. The link to the m5f file is [here](./PoolController.m5f).
