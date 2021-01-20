@@ -41,8 +41,8 @@ You will need to replace or update the following with your local configuration.
 - NTP host pool and timezone (optional) = change to an NTP server and timezone offset applicable to your region (mine is set to US Eastern time zone)
 - If you changed the default MQTT port 1883, you should also change it in the uiFlow program.
 - If you changed the default Home Assistant port 8123, you should also change it in the uiFlow program.
-- You will most likely not have the same pool equipment setup that I have. Therefore, you will need to check the entity names within Home Assistant, under the Configuration menu, then Entities. You should update the uiFlow program with the Entity ID shown in HA.
-<img src="./HA_entities.png" width="640">
+- You will most likely not have the same pool equipment that I have. Therefore, you will need to check the entity names within Home Assistant, under the Configuration menu, then Entities. You should update the uiFlow program Http Request URL block "api/states" with the Entity ID shown in HA.
+<img src="./HA_entities.png" width="960">
 
 
 ## MicroPython code
