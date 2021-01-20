@@ -16,12 +16,14 @@ For this project, you will need Home Assistant already set up and running. Then 
 
 You will also need to set up a Long-Lived Access Token (LLAT) within Home Assistant. Go to your Profile within HA and scroll down to the bottom where you see the link for "Create Token" under Long-Lived Access Tokens. You will need to copy/paste this API token into the uiFlow Http Request API Header blocks (key "Authorization" value "Bearer {your_LLAT_from_Home_Assistant}"
 
+<img src="./LLAT.png" width="440">
+
 
 
 ## uiFlow
 *Note: at the time of writing, I'm using uiFlow V1.7.1*
 
-Here is the uiFlow program for the M5Stack IoT Pool Controller. You will need to replace or update the following with your local configuration.
+Here is the uiFlow program for the M5Stack IoT Pool Controller. You will need to replace or update the following with your local configuration. The link to the m5f file is [here](./PoolController.m5f).
 - ssid = your local WiFi SSID
 - password = your local WiFi SSID password
 - HA_IP = your local Home Assistant IP address
@@ -29,7 +31,7 @@ Here is the uiFlow program for the M5Stack IoT Pool Controller. You will need to
 - HA_password = the password to the HA user
 - NTP host pool and timezone (optional) = change to an NTP server and timezone offset applicable to your region (mine is set to US Eastern time zone)
 
-
+![uiFlow.png](./uiFlow.png)
 
 ## MicroPython code
 ```
