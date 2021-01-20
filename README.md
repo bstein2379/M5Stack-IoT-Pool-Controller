@@ -29,7 +29,10 @@ Note: keep the word *Bearer* in front of the API token.
 ## uiFlow Program
 *Note: at the time of writing, I'm using uiFlow V1.7.1*
 
-Here is the uiFlow program for the M5Stack IoT Pool Controller. You will need to replace or update the following with your local configuration. The link to the m5f file is [here](./PoolController.m5f).
+Here is the uiFlow program for the M5Stack IoT Pool Controller. The link to the m5f file is [here](./PoolController.m5f).
+![uiFlow.png](./uiFlow.png)
+
+You will need to replace or update the following with your local configuration.
 - ssid = your local WiFi SSID
 - password = your local WiFi SSID password
 - HA_IP = your local Home Assistant IP address
@@ -38,8 +41,9 @@ Here is the uiFlow program for the M5Stack IoT Pool Controller. You will need to
 - NTP host pool and timezone (optional) = change to an NTP server and timezone offset applicable to your region (mine is set to US Eastern time zone)
 - If you changed the default MQTT port 1883, you should also change it in the uiFlow program.
 - If you changed the default Home Assistant port 8123, you should also change it in the uiFlow program.
+- You will most likely not have the same pool equipment setup that I have. Therefore, you will need to check the entity names within Home Assistant, under the Configuration menu, then Entities. You should update the uiFlow program with the Entity ID shown in HA.
+<img src="./HA_entities.png" width="640">
 
-![uiFlow.png](./uiFlow.png)
 
 ## MicroPython code
 ```
