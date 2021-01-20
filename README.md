@@ -30,6 +30,8 @@ Here is the uiFlow program for the M5Stack IoT Pool Controller. You will need to
 - HA_user = A user set up on Home Assistant
 - HA_password = the password to the HA user
 - NTP host pool and timezone (optional) = change to an NTP server and timezone offset applicable to your region (mine is set to US Eastern time zone)
+- If you changed the default MQTT port 1883, you should also change it in the uiFlow program.
+- If you changed the default Home Assistant port 8123, you should also change it in the uiFlow program.
 
 ![uiFlow.png](./uiFlow.png)
 
